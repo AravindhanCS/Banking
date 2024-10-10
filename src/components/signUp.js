@@ -3,7 +3,7 @@ import { TextField, Button, Container, Grid, Typography, Box, Select, MenuItem,F
 import { styled, keyframes } from '@mui/system';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios'; // Import axios for API requests
-import app from './firebase'; // Adjust the path as necessary
+// import app from './firebase'; // Adjust the path as necessary
 import { getStorage, ref, uploadBytes, getDownloadURL } from 'firebase/storage';
 
 //const storage = getStorage(app);

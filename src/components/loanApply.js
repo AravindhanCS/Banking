@@ -5,7 +5,7 @@ import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import axios from 'axios';
 import app from './firebase'; // Adjust the path as necessary
 import { getStorage, ref, uploadBytes, getDownloadURL } from 'firebase/storage';
-const storage = getStorage(app);
+// const storage = getStorage(app);
 
 //const STORAGE_BASE_URL = 'gs://banking-management-syste-72242.appspot.com';
 

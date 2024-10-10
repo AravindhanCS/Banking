@@ -523,7 +523,7 @@ const fetchAndIncrementTransactionId = async () => {
 
   useEffect(() => {
     checkAccountStatus();
-  }, []);
+  });
 
   return (
     <>
