@@ -56,51 +56,6 @@ const StyledButton = styled(Button)({
   },
 });
 
-const ForgotPasswordModal = ({ open, onClose, onSubmit }) => {
-    const [email, setEmail] = useState('');
-  
-    const handleSubmit = () => {
-      onSubmit(email);
-    };
-  
-    return (
-      <Modal open={open} onClose={onClose}>
-        <Box
-          sx={{
-            position: 'absolute',
-            top: '50%',
-            left: '50%',
-            transform: 'translate(-50%, -50%)',
-            width: 400,
-            bgcolor: 'background.paper',
-            border: '2px solid #000',
-            boxShadow: 24,
-            p: 4,
-          }}
-        >
-          <Typography variant="h6" gutterBottom>
-            Reset Password
-          </Typography>
-          <TextField
-            fullWidth
-            label="Enter Email ID"
-            variant="outlined"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-          />
-          <Box mt={2} display="flex" justifyContent="flex-end">
-            <Button onClick={handleSubmit} variant="contained" color="primary">
-              Submit
-            </Button>
-          </Box>
-        </Box>
-      </Modal>
-    );
-  };
-  
-
-
 const SignIn = () => {
   const [customerId, setCustomerId] = useState('');
   const [password, setPassword] = useState('');

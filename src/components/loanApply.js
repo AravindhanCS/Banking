@@ -7,7 +7,7 @@ import app from './firebase'; // Adjust the path as necessary
 import { getStorage, ref, uploadBytes, getDownloadURL } from 'firebase/storage';
 const storage = getStorage(app);
 
-const STORAGE_BASE_URL = 'gs://banking-management-syste-72242.appspot.com';
+//const STORAGE_BASE_URL = 'gs://banking-management-syste-72242.appspot.com';
 
 const FIRESTORE_BASE_URL = 'https://firestore.googleapis.com/v1/projects/banking-management-syste-72242/databases/(default)/documents';
 
@@ -31,7 +31,6 @@ const FileLabel = styled('span')(({ theme }) => ({
     marginTop: '10px',
     fontWeight: 'bold',
     color: 'lightgreen',  // Set color to green when a file is uploaded
-    display: 'flex',
     alignItems: 'center',
   }));
 

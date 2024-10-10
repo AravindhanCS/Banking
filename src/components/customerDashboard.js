@@ -43,7 +43,7 @@ const CustomerDashboard = () => {
   const checkAccountStatus = async () => {
     const customerId = sessionStorage.getItem('customerId');
 
-    if(customerId==0){
+    if(customerId===0){
         alert("Please LoginIn to Continue!!");
         navigate('/'); // Redirect to SignIn page
     }
@@ -251,7 +251,7 @@ const CustomerDashboard = () => {
         }
       );
   
-      if(response.data[0].document==undefined){
+      if(response.data[0].document===undefined){
         alert("Please enter correct account number !!");
         return false;
       }
@@ -263,7 +263,7 @@ const CustomerDashboard = () => {
 
       let accountType = response.data[0].document.fields.accountType.stringValue;
 
-      if(accountType=="Current" || accountType=="Savings" ){
+      if(accountType==="Current" || accountType==="Savings" ){
         let money = response.data[0].document.fields.Amount.integerValue;
         if(money<amount){
             alert("Insuffiecient Balance");
@@ -309,7 +309,7 @@ const verifyReceiverAccountNumber = async (accountNumber) => {
         }
       );
   
-      if(response.data[0].document==undefined){
+      if(response.data[0].document===undefined){
         alert("Please enter correct Sender account number !!");
         return false;
       }
@@ -388,7 +388,7 @@ const updateBalance = async (accountNumber, balance) => {
     console.log(ifscCode);
     console.log(amount);
 
-    if(senderAccountNumber==receiverAccountNumber){
+    if(senderAccountNumber===receiverAccountNumber){
       alert("Sender and receiver account number should not be same!!");
       return;
     }
@@ -401,7 +401,7 @@ const updateBalance = async (accountNumber, balance) => {
     let transaction = false;
 
     if(await verifySenderAccountNumber(senderAccountNumber,amount)){
-        if(ifscCode=="Aravind1234"){
+        if(ifscCode==="Aravind1234"){
             if(await verifyReceiverAccountNumber(receiverAccountNumber)){
 
               const senderRecord = await axios.post(
@@ -440,7 +440,7 @@ const updateBalance = async (accountNumber, balance) => {
 
               let senderUpdatedBalance;
               let receiverUpdatedBalance;
-              if(receiverAccountType!="Loan"){
+              if(receiverAccountType!=="Loan"){
                 senderUpdatedBalance=parseInt(senderRecord.data[0].document.fields.Amount.integerValue)-parseInt(amount);
                 receiverUpdatedBalance=parseInt(receiverRecord.data[0].document.fields.Amount.integerValue)+parseInt(amount);
                 console.log(senderUpdatedBalance);

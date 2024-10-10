@@ -6,11 +6,11 @@ import axios from 'axios'; // Import axios for API requests
 import app from './firebase'; // Adjust the path as necessary
 import { getStorage, ref, uploadBytes, getDownloadURL } from 'firebase/storage';
 
-const storage = getStorage(app);
+//const storage = getStorage(app);
 
 
 const FIRESTORE_BASE_URL = 'https://firestore.googleapis.com/v1/projects/banking-management-syste-72242/databases/(default)/documents';
-const STORAGE_BASE_URL = 'gs://banking-management-syste-72242.appspot.com'; // Replace with your Firebase Storage bucket
+//const STORAGE_BASE_URL = 'gs://banking-management-syste-72242.appspot.com'; // Replace with your Firebase Storage bucket
 
 
 // Animation keyframes for the form
@@ -109,7 +109,7 @@ const SignUp = () => {
     const url = `https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=${API_KEY}`;
 
     try {
-      const response = await axios.post(url, {
+      await axios.post(url, {
         email,
         password,
         returnSecureToken: true, // Request the secure token from Firebase

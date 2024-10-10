@@ -58,7 +58,7 @@ const AdminLogin = () => {
       return;
     }
 
-    if(email!="csaravindhan2001@gmail.com"){
+    if(email!=="csaravindhan2001@gmail.com"){
         alert("This is not user email Id!!");
         return;
     }

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Paper, Typography, Button, Avatar, Box, CircularProgress } from '@mui/material';
+import { Paper, Typography, Button, Box, CircularProgress } from '@mui/material';
 import { styled } from '@mui/system';
 import axios from 'axios';
 

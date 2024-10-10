@@ -36,7 +36,7 @@ const ManageAccounts = () => {
 
   const customerId = sessionStorage.getItem('customerId');
 
-    if(customerId==0){
+    if(customerId===0){
         alert("Please LoginIn to Continue!!");
         navigate('/'); // Redirect to SignIn page
     }
@@ -153,7 +153,7 @@ const ManageAccounts = () => {
       }
     );
 
-    if(response.data[0].document==undefined){
+    if(response.data[0].document===undefined){
       alert("Please enter correct account number or account type!!\n(Note: You can't able to delete the blocked account)");
       return;
     }

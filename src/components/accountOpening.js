@@ -281,7 +281,7 @@ const AccountOpening = () => {
             let documentId=response2.data[account].document.name.split('/').pop();
 
             let updateFields = `updateMask.fieldPaths=isDelete`;
-            const response = await fetch(`https://firestore.googleapis.com/v1/projects/banking-management-syste-72242/databases/(default)/documents/account/${documentId}?${updateFields}`, {
+            await fetch(`https://firestore.googleapis.com/v1/projects/banking-management-syste-72242/databases/(default)/documents/account/${documentId}?${updateFields}`, {
                 method: 'PATCH',  // Use PATCH for partial updates
                 headers: {
                     'Content-Type': 'application/json'
